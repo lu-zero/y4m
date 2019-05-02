@@ -89,7 +89,7 @@ fn parse_bytes(buf: &[u8]) -> Result<usize, Error> {
 }
 
 /// Simple ratio structure since stdlib lacks one.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Ratio {
     /// Numerator.
     pub num: usize,
@@ -119,7 +119,7 @@ impl fmt::Display for Ratio {
 /// yuv444p10, yuv422p10, yuv420p10, yuv444p12, yuv422p12, yuv420p12,
 /// yuv444p14, yuv422p14, yuv420p14, yuv444p16, yuv422p16, yuv420p16, gray9,
 /// gray10, gray12 and gray16 pixel formats.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub enum Colorspace {
     /// Grayscale only, 8-bit.
     Cmono,
